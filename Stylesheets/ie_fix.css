@@ -1,0 +1,7 @@
+#flagtop {
+	z-index:-1;
+}
+
+#submenu li a:hover {
+	zoom:1;
+}

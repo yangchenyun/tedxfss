@@ -1,0 +1,395 @@
+/* Global */
+hr {
+	border-top: 3px dotted #FF2B06;
+	width: 940px;
+	margin: 20px 0;
+}
+h2 {
+	text-transform: capitalize;
+}
+
+h3 {
+	font-size: 1.2em;
+	font-family: georgia, serif;
+}
+
+h2.title {
+	background: url('../images/title-bg.png') no-repeat;
+	height:48px;
+	font: 1.45em impact, sans-serif;
+	color:white;
+	text-transform: uppercase;
+}
+
+h2.title p {
+	margin-left: 120px;
+	padding-top:9px;
+}
+
+p.short {
+	color:gray;
+	text-indent:10px;
+}
+
+/*Head Logo*/
+h1#headlogo a{
+	background: url('../images/Logo-blacktext.png') no-repeat 51% 10%; 
+	text-indent: -9999px;
+	height: 50px;
+	margin-top:20px;
+	display:block;
+}
+
+/*Main Menu*/
+#mainmenu li {
+	display: inline;
+	text-align: center;
+	height: 50px;
+	font: 1.3em Arial, sans-serif;
+	text-transform: uppercase;
+	color: #FF2B06;
+	padding-top:12px;
+	border-top: 8px solid transparent;
+}
+#mainmenu li:hover {
+	border-color: #ff2b06;
+	cursor: pointer;
+}
+#mainmenu .selected {
+	color: white;
+	background-color: #FF2B06;
+	border-color: #ff2b06;
+}
+
+/* The date flag*/
+#secondrow {
+	position:relative;
+}
+
+#dateflag {
+	position: absolute;
+	top: 30px;
+	left: 300px;
+	width:100px;
+	height:120px;
+	background-color: #FF2b06;
+	font-family:impact, sans-serif;
+	color:white;
+	text-align:center;
+	
+}
+
+#date {
+	 font-size: 2.7em; 
+	 margin-top: 15px;
+	 text-transform: uppercase;
+}
+
+#dateflag #day {
+	margin-top: -5px;
+	font-size: 3.7em;
+}
+
+#flagtop {
+	position:absolute;
+	top: 119px;
+	left: 0;
+}
+
+/* Social Media*/
+#social_media li {
+	display: inline;
+
+}
+
+#social_media li a {
+	height: 30px;
+	display: block;
+	float: right;
+	width: 19%;
+	margin-left: 6%;
+	text-indent: -9999px;
+}
+
+#rss {
+	background: url('../images/rss.png') no-repeat; 
+}
+
+#rss:hover {
+	background: url('../images/rss-hover.png') no-repeat; 
+}
+
+#twitter {
+	background: url('../images/twitter.png') no-repeat; 
+}
+
+#twitter:hover {
+	background: url('../images/twitter-hover.png') no-repeat; 
+}
+
+#facebook {
+	background: url('../images/facebook.png') no-repeat; 
+}
+
+#facebook:hover {
+	background: url('../images/facebook-hover.png') no-repeat; 
+}
+
+/*Sub Menu*/
+#submenu {
+	background-color: #FF2B06;
+	height: 30px;
+}
+
+#submenu li a {
+	display:block;
+	margin: 5% 10% 5% 10%;
+	padding:2px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+#submenu li a:hover {
+	zoom:1;
+	background-color: #FFF;
+	color: #FF2B06;
+
+}
+
+/* Bulletin*/
+#highlight {
+	margin-top: 29px;
+}
+#highlight h2 {
+	color: #FF2B06;
+	font: normal 4em impact, sans-serif;
+}
+#highlight h3 {
+	color: black;
+	font: normal 2em impact, sans-serif;
+}
+
+
+/*Registration Form*/
+#regform {
+	margin-top: 180px;
+}
+#inputbar {
+	background: url('../images/input-bg.png') no-repeat; 
+	width: 238px;
+	height: 49px;
+	float: left;
+}
+#regform input {
+	margin: 8px 4px 16px 9px;
+	border: none;
+	width: 221px;
+	height: 31px;
+	background: transparent; 
+	font: 1.1em arial, sans-serif;
+	color: gray;
+}
+#regbutton {
+	background: url('../images/regbutton.png') no-repeat; 
+	border:none;
+	width: 91px;
+	height: 59px;
+	position: relative;
+	bottom: 4px;
+	left: 11px;
+}
+#regbutton span {
+	font: 1.3em impact, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+	margin: 1px 0px 7px 8px;
+}
+#regbutton:hover {
+	background: url('../images/regbutton-hover.png') no-repeat;
+	color:white;
+	cursor: pointer;
+}
+
+/* Speaker Glide*/
+#speakerglide {
+	overflow:hidden;
+}
+#speakerlist {
+	margin-left: -480px;
+	width:20000px;
+}
+
+.speaker a {
+	float:right;
+	display:block;
+	color: #FF2B06;
+	padding: 0px 4px 4px 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration:none;
+}
+
+.speaker a:hover {
+	color: white;
+	background-color: #FF2B06;
+}
+
+
+/* The glide button*/
+#showcontainer {
+	position: relative;
+}
+#slideback {
+
+	width: 47px;
+	height: 80px;
+	position:absolute;
+	top: 120px;
+	left: 15px;
+	background: url('../images/larrow.png') no-repeat;
+	text-indent: -9999px;
+	
+}
+#slideback:hover {
+	background: url('../images/larrow-hover.png') no-repeat;
+}
+#slideforward {
+
+	width: 47px;
+	height: 80px;
+	position:absolute;
+	top: 120px;
+	left: 880px;
+	background: url('../images/rarrow.png') no-repeat;
+	text-indent: -9999px;	
+}
+
+#slideforward:hover {
+	background: url('../images/rarrow-hover.png') no-repeat;
+}
+
+/* Location and Map*/
+#location h3 {
+	margin-top:50px;
+}
+#location img{
+	margin-right: 10px;
+}
+
+#location p.route {
+	margin:3px 0px;
+}
+
+
+#map {
+	height:400px;
+	background: url('../images/map.png') no-repeat;
+	text-indent: -9999px;
+}
+
+/* Schedule and table*/
+#timetable {
+	margin-top:30px;
+}
+
+#scheduletable {
+	width: 480px;
+	padding: 0;
+	margin: 0;
+}
+
+caption {
+	padding: 0 0 5px 0;
+	width: 480px;	 
+	text-align: center;
+	font: 1.1em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+th {
+	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+}
+
+th.nobg {
+	border-top: 0;
+	border-left: 0;
+	background: none;
+}
+
+td {
+/*	border-right: 1px solid #402D2E;
+	border-bottom: 1px solid #402D2E;
+	background: #fff;*/
+	padding: 6px 6px 6px 12px;
+	font-family:"Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+th.spec {
+	border-top: 0;
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Footer */
+#footer {
+	overflow:hidden;
+	color:white;
+	border-top:10px solid #FF2B06;
+	margin-top:30px;
+	padding: 20px 0px;
+	width:940px;
+	background: black url('../images/footer-bg.png') center bottom no-repeat;
+}
+#sitemap {
+	height:130px;
+}
+#sitemap h3{
+	margin-left:-10px;
+	margin-bottom:5px;
+}
+#sitemap li {
+	list-style-type: none;	
+}
+
+#sitemap li a{
+	color: gray;
+	text-decoration: none;
+}
+#sitemap li a:hover {
+	color: #FF2b06;
+	text-decoration:underline;
+}
+#footerlogo span {
+	background: black url('../images/Logo-whitetext.png') no-repeat;
+	text-indent: -9999px;
+	height:50px;
+	display:block;
+	margin:35px 5px 6px 20px;
+}
+
+#siteinfo p {
+	color:gray;
+	font-size:0.8em;
+}
+
+p#author {
+	color:gray;
+	position: relative;
+	top: 30px;
+}
