@@ -29,8 +29,11 @@ $(document).ready(function(){
 
 	<div id="tedintro" class="intro push_2 grid_12">
 		<div id="videocontainer" width="446" height="326">
-		<embed src="http://video.ted.com/assets/player/swf/EmbedPlayer.swf" pluginspace="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" bgColor="#ffffff" width="446" height="326" allowFullScreen="true" allowScriptAccess="always" flashvars="vu=http://video.ted.com/talk/stream/2011A/Blank/MickEbeling_2011A-320k.mp4&su=http://images.ted.com/images/ted/tedindex/embed-posters/MickEbeling-2011A.embed_thumbnail.jpg&vw=432&vh=240&ap=0&ti=1115&lang=eng&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=mick_ebeling_the_invention_that_unlocked_a_locked_in_ar;year=2011;theme=the_creative_spark;theme=art_unusual;theme=design_like_you_give_a_damn;theme=what_s_next_in_tech;theme=the_rise_of_collaboration;theme=tales_of_invention;event=Tales+of+Invention;tag=Design;tag=Technology;tag=creativity;tag=disease;tag=invention;tag=open-source;"></embed>
+		<!-- Pull a random video into the page out of our pool -->
+		<?php include 'content/videolist.php'; ?>
+		<?php echo $videos[rand(0, sizeof($videos)-1)]; ?>
 		</div><!-- End of Videocontainer -->
+
 		<p>TED (Technology Entertainment and Design) is a global set of conferences curated by the American private non-profit Sapling Foundation, formed to disseminate "ideas worth spreading". Since 2007, the talks have been offered for free viewing online, under a Creative Commons license, through <a href="http://www.ted.com">TED.com</a>. More than 700 talks are currently available. As of April 2009, the talks have been viewed over 250 million times by more than 25 million people.</p>
 
 		<p>TED was founded in 1984 as a one-off event, and the conference was held annually from 1990 in Monterey, California. TED's early emphasis, was largely technology and design, consistent with a Silicon Valley center of gravity. The events are now held in Long Beach and Palm Springs in the U.S. as well as in Europe and Asia, offering live streaming of the talks. They address an increasingly wide range of topics within the research and practice of science and culture. The speakers are given a maximum of 18 minutes to present their ideas in the most innovative and engaging ways they can. Past presenters include Bill Clinton, Jane Goodall, Malcolm Gladwell, Al Gore, Gordon Brown, Richard Dawkins, Bill Gates, the founders of Google and many Nobel Prize winners.[3]TED's current curator is the British former computer journalist and magazine publisher Chris Anderson.
@@ -52,41 +55,18 @@ $(document).ready(function(){
 
 			<div id="memberglide" class="grid_12 push_2 alpha">
 				<ul id="speakerlist">
-					<li class="speaker grid_4 alpha">
-						<img src="images/speaker1.jpg" alt="speaker1" width="220px"/>
-						<h3>Lorem Ipsum</h3>
-						<p class="short">Awesome Guy TEDx</p>
-						<p class="intro">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-						<a href="">more</a>
+				<!-- include the content of speaker list -->
+				<?php include 'content/memberlist.php'; ?>
+				<!-- Generate -->
+				<?php foreach ($members as $member): ?>
+					<li class="speaker grid_4 <?php if ($member['id'] == 1) { echo 'alpha';} ?>">
+						<img src="<?php echo $member['img']; ?>" alt="<?php echo $member['name']; ?>" width="220px"/>
+						<h3><?php echo $member['name']; ?></h3>
+						<p class="short"><?php echo $member['title']; ?></p>
+						<p class="intro"><?php echo $member['text']; ?></p>
+						<a href="member.php#<?php echo $member['id']; ?>">more</a>
 					</li>
-					<li class="speaker grid_4">
-						<img src="images/speaker1.jpg" alt="speaker1" width="220px"/>
-						<h3>Lorem Ipsum</h3>
-						<p class="short">Awesome Guy TEDx</p>
-						<p class="intro">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-						<a href="">more</a>
-					</li>
-					<li class="speaker grid_4">
-						<img src="images/speaker3.jpg" alt="speaker1" width="220px"/>
-						<h3>Lorem Ipsum</h3>
-						<p class="short">Awesome Guy TEDx</p>
-						<p class="intro">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-						<a href="">more</a>
-					</li>
-					<li class="speaker grid_4">
-						<img src="images/speaker2.jpg" alt="speaker1" width="220px"/>
-						<h3>Lorem Ipsum</h3>
-						<p class="short">Awesome Guy TEDx</p>
-						<p class="intro">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-						<a href="">more</a>
-					</li>
-					<li class="speaker grid_4">
-						<img src="images/speaker1.jpg" alt="speaker1" width="220px"/>
-						<h3>Lorem Ipsum</h3>
-						<p class="short">Awesome Guy TEDx</p>
-						<p class="intro">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-						<a href="">more</a>
-					</li>
+				<?php endforeach ?>
 				</ul>
 			</div><!-- End of Speakerglide -->
 		</div><!-- END of Showcontainer -->

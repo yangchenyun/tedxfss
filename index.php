@@ -35,7 +35,7 @@ $(document).ready(function(){
 			<div id="speakerglide" class="grid_12 push_2 alpha">
 				<ul id="speakerlist">
 				<!-- include the content of speaker list -->
-				<?php include 'speakerlist.php'; ?>
+				<?php include 'content/speakerlist.php'; ?>
 				<!-- Generate -->
 				<?php foreach ($speakers as $speaker): ?>
 					<li class="speaker grid_4 <?php if ($speaker['id'] == 1) { echo 'alpha';} ?>">
@@ -43,7 +43,7 @@ $(document).ready(function(){
 						<h3><?php echo $speaker['name']; ?></h3>
 						<p class="short"><?php echo $speaker['title']; ?></p>
 						<p class="intro"><?php echo $speaker['text']; ?></p>
-						<a href="<?php echo $speaker['id']; ?>">more</a>
+						<a href="speaker.php#<?php echo $speaker['id']; ?>">more</a>
 					</li>
 				<?php endforeach ?>
 				</ul>

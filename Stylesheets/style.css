@@ -403,6 +403,18 @@ th.specalt {
 	margin: 0px 0px 10px 5px;
 }
 
+/* SpeakerList Content*/
+.item {
+	margin: 1em 0;
+}
+
+.item img.alt {
+	float:right;
+}
+
+.item div.alt {
+	text-align:right;
+}
 
 /* Footer */
 #footer {

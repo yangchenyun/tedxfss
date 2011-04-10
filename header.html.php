@@ -23,7 +23,8 @@
 
 			<ul id="mainmenu" class="grid_6 push_2 omega">
 			<!-- Highlight selected button -->
-				<li class="grid_2 alpha <?php if ($page == 'index'||$page == 'form') { echo 'selected';  } ?>"><a href="index.php">Event</a></li>
+				<!-- Default selected section is event -->
+				<li class="grid_2 alpha <?php if ($page != 'about' || $page != 'joinin') { echo 'selected';  } ?>"><a href="index.php">Event</a></li>
 				<li class="grid_2 <?php if ($page == 'about') { echo 'selected';  } ?>"><a href="about.php">About</a></li>
 		  		<li class="grid_2 omega <?php if ($page == 'joinin') { echo 'selected';  } ?>"><a href="joinin.php">Join In</a></li>
 			</ul>
@@ -38,7 +39,7 @@
 
 			<!-- Display submenu items according to pages -->
 			<!-- Index Page -->
-			<?php if ($page == 'index'||$page == 'form') { ?>
+			<?php if ($page != 'about' || $page != 'joinin') { ?>
 			<ul id="submenu" class="grid_8 omega">
 				<li class="subitem grid_2 alpha"><a href="">Location</a></li>
 				<li class="subitem grid_2"><a href="">Time</a></li>
