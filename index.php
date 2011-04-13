@@ -1,9 +1,7 @@
-<?php $page = 'index'; ?> 
-<!-- A customized tag to distinguish different pages -->
-<?php 
+<?php $page = 'index'; 
+// A customized tag to distinguish different pages
 	$title = 'TEDxFSS Conference at 15th May, Shanghai'; 
 	include 'header.html.php'; ?>
-
 <!-- Include JQuery and Slide Script -->
 <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.js"></script>
 <script type="text/javascript" src="js/Slider.js"></script>
@@ -29,7 +27,7 @@ $(document).ready(function(){
 	<div id="content" class="container_16">
 
 		<h2 class="title grid_6 suffix_10">
-			<p>Our Speaker</p>
+			<span>Our Speaker</span>
 		</h2>
 		<div id="showcontainer" class="grid_16">
 			<div id="speakerglide" class="grid_12 push_2 alpha">
@@ -51,29 +49,9 @@ $(document).ready(function(){
 		</div><!-- END of Showcontainer -->
 
 		<br class="clear"/>
-		<hr class="grid_16"><!-- Dotted line for speaker information -->
-
-		<h2 class="title grid_6 suffix_10">
-			<p>Awesome Venue</p>
-		</h2>
-		<div id="location" class="grid_4 prefix_2">
-			<h3>Location</h3>
-			<p class="short">KIC Plaza7</p>
-			<p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-			<h3 id="traffic">Traffic</h3>
-			<p class="route"><img src="images/metro1.png" alt="Metro1"/>ShanghaiXinanlu Station</p>
-			<p class="route"><img src="images/metro2.png" alt="Metro1"/>Pudong International Airport</p>
-			<p class="route"><img src="images/metro3.png" alt="Metro1"/>South Railway Station</p>
-		</div>
-		<div id="map" class="grid_7 push_1">
-			Location Map
-		</div>
-
-		<br class="clear"/>
-		<hr class="grid_16"><!-- Dotted line for venue informat -->
-
-		<h2 class="title grid_6 suffix_10">
-			<p>Schedule</p>
+		<hr class="grid_16"/><!-- Dotted line for speaker information -->
+			<h2 class="title grid_6 suffix_10">
+			<span>Schedule</span>
 		</h2>
 		<div id="speechinfo" class="grid_10 prefix_2 suffix_4">
 			simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -112,7 +90,28 @@ $(document).ready(function(){
 					  </tr>
 				</tbody>
 			</table>
+		</div><!-- End of schedule -->
+		
+
+		<br class="clear"/>
+		<hr class="grid_16"/><!-- Dotted line for venue informat -->
+		<h2 class="title grid_6 suffix_10">
+			<span>Awesome Venue</span>
+		</h2>
+		<div id="location" class="grid_4 prefix_2">
+			<h3>Location</h3>
+			<p class="short">KIC Plaza7</p>
+			<p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+			<h3 id="traffic">Traffic</h3>
+			<p class="route"><img src="images/metro1.png" alt="Metro1"/>ShanghaiXinanlu Station</p>
+			<p class="route"><img src="images/metro2.png" alt="Metro1"/>Pudong International Airport</p>
+			<p class="route"><img src="images/metro3.png" alt="Metro1"/>South Railway Station</p>
 		</div>
+		<div id="map" class="grid_7 push_1">
+			Location Map
+		</div>
+
+
 	</div><!-- End of Content -->
 	<br class="clear"/>
 
