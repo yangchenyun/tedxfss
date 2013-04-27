@@ -6,7 +6,7 @@
 
 This content PHP could later be used as a database inserting script
 -->
-<?php 
+<?php
 
 
 $members[] = array ('id' => 1,
